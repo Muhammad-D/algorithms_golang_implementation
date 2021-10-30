@@ -26,7 +26,7 @@ func mergeSort(slice []int) []int {
 		return slice
 	}
 
-	middle := size / 2
+	middle := int(size / 2)
 
 	var (
 		left  = make([]int, middle)
@@ -55,12 +55,11 @@ func merge(left, right []int) (result []int) {
 		if left[0] < right[0] {
 			result[i] = left[0]
 			left = left[1:]
-			i++
 		} else {
 			result[i] = right[0]
 			right = right[1:]
-			i++
 		}
+		i++
 	}
 
 	for _, v := range left {

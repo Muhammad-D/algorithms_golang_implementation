@@ -8,10 +8,10 @@ import (
 
 func Start() {
 	mySlice := model.GenerateSlice(8)
-	fmt.Println(mySlice)
+	fmt.Println("\nUnsorted list:", mySlice, "\n ")
 	inv := mergeSort(mySlice)
-	fmt.Println(inv)
-	fmt.Println(mySlice)
+	fmt.Println("A number of inversions:", inv, "\n ")
+	fmt.Println("Sorted list:  ", mySlice, "\n ")
 
 }
 
